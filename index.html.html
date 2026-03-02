@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>Epoxy Garage Floor Cost Calculator Edmonton | Park Epoxy</title>
+  
+  <style>
+    body { 
+      margin:0; 
+      font-family: Arial, Helvetica, sans-serif; 
+      background:#111; 
+      color:#fff; 
+      overflow-x: hidden;
+    }
+    .wrap { 
+      max-width:600px; 
+      width:95%; 
+      margin:auto; 
+      padding:24px; 
+    }
+    .card { 
+      background:#1a1a1a; 
+      border-radius:14px; 
+      padding:28px; 
+      box-shadow:0 10px 30px rgba(0,0,0,.5); 
+      border:1px solid #2a2a2a; 
+    }
+    .logo { 
+      text-align:center; 
+      margin-bottom:18px; 
+    }
+    .logo img { 
+      max-width:220px; 
+      height:auto; 
+    }
+    h1 { 
+      text-align:center; 
+      margin-bottom:8px; 
+      color:#f5c400; 
+      font-size: 24px; 
+    }
+    .subtext { 
+      text-align:center; 
+      color:#bbb; 
+      margin-bottom:24px; 
+      font-size:14px; 
+    }
+    label { 
+      display:block; 
+      margin-top:14px; 
+      margin-bottom:6px; 
+      font-weight:bold; 
+      color: #eee; 
+    }
+    input, select { 
+      width:100%; 
+      padding:12px; 
+      border-radius:8px; 
+      border:1px solid #333; 
+      background:#0f0f0f; 
+      color:#fff; 
+      font-size:16px; 
+      min-height:50px;
+      box-sizing: border-box; 
+    }
+    button { 
+      width:100%; 
+      margin-top:22px; 
+      padding:14px; 
+      font-size:18px; 
+      font-weight:bold; 
+      border:none; 
+      border-radius:10px; 
+      background:#f5c400; 
+      color:#000; 
+      cursor:pointer; 
+      transition:.2s ease; 
+      min-height:50px;
+    }
+    button:hover { 
+      background:#ffd633; 
+      transform:translateY(-1px); 
+    }
+    .result, .success { 
+      margin-top:24px; 
+      padding:18px; 
+      background:#101010; 
+      border-radius:10px; 
+      display:none; 
+      border:1px solid #333; 
+      word-wrap: break-word;
+    }
+    .price { 
+      font-size:32px; 
+      font-weight:bold; 
+      color:#f5c400; 
+      text-align:center; 
+    }
+    .disclaimer { 
+      font-size: 12px; 
+      color: #888; 
+      text-align: center; 
+      margin-top: 10px; 
+      font-style: italic; 
+    }
+  </style>
+</head>
+<body>
+
+<div class="wrap">
+  <div class="card">
+    <div class="logo">
+      <!-- Placeholder Base64 PNG: replace with your actual logo Base64 -->
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAYAAABV7bNHAAAACXBIWXMAAAsTAAALEwEAmpwYAAABpElEQVR4nO3bQQ0CMQxE0R5kEtdg4qGFO2LzVyg+ozsD4zPA4MDw+v/C+J5t0F6xgAAAAAAwHhtcR25ngCr+EhAAAcAHg3rDgAAHAH4b6HkAAAcAfhuodAAAHAH4b6HkAAAcAfhuodAAAHAH4b6HkAAAcAfhuodAAAHAH4b6HkAAAcAfhuodAAAHAH4b6HkAAAcAfhuodAAAHAH4b6HkAAAcAfhuodAAAHAH4b6HkAAAcAfhuodAAAHAH4b6HkAAAcAfhuodAAAHAH4b6HkAAAcAfhuodAAAHAH4b6HkAAAcAfhuodAAAHAH4b6HkAAAcAfhuodAAAHAH4b6HkAAAcAfhuodAAAHAH4b6HkAAAcAfhuodAAAHAH4b6HkAAAcAfhuodAAAHAH4b6HkAAAcAfhuodAAAHAH4b6HkAAAcAfhuodAAAHAH4b6HkAAAcAfhuodAAAHAH4b6HkAAAcAfhuodAAAHAH4b6HkAAAcAfhuodAAAHAH4b6HkAAAcAfhuodAAAHAH4b6HkAAAcAfhuodAAAHAH4b6HkAAAcAfhuodAAAHAH4b6HkAAAcAfhuodAAAHAH4b6HkAAAcAfhuodAAAHAH4b6HkAAAcAfhuodAAAHAH4b6HkAAAcAfhuodAAAHAH4b6HkAAAcAfhuodAAAHAH4b6HkAAAcAfhuodAAAHAH4b6HkAAAcAfhuodAAAHAH4b6HkAAAcAfhuodAAAHAH4b6HkAAAcAfhuodAAAHAH4b6HkAAAcAfhuodAAAHAH4b6HkAAAcAfhuodAAAHAH4b6HkAAAcAfhuodAAAHAH4b6HkAAAcAfhuodAAAHAH4b6HkAAAcAfhuodAAAHAH4b6HkAAAcAfhuodAAA" alt="Park Epoxy logo" />
+    </div>
+
+    <h1>Garage Floor Calculator</h1>
+    <div class="subtext">Serving Edmonton & Sherwood Park</div>
+
+    <label>Garage Size (sq ft)</label>
+    <input type="number" id="sqft" placeholder="e.g. 450" />
+
+    <label>Floor System</label>
+    <select id="system">
+      <option value="6.5">Epoxy Flake Floor ($6.50 / sq ft)</option>
+      <option value="8">Quartz Floor ($8.00 / sq ft)</option>
+      <option value="10">Metallic Epoxy ($10.00 / sq ft)</option>
+    </select>
+
+    <label>Email Address</label>
+    <input type="email" id="email" placeholder="name@email.com" />
+
+    <label>Phone Number</label>
+    <input type="tel" id="phone" placeholder="780-000-0000" />
+
+    <button type="button" onclick="calculateAndSubmit()">Get My Instant Estimate</button>
+
+    <div class="success" id="successMsg">✔ Estimate sent to Park Epoxy! We'll be in touch.</div>
+
+    <div class="result" id="result">
+      <div class="price" id="priceDisplay"></div>
+      <div class="disclaimer">Note: Final pricing depends on concrete condition and prep required.</div>
+    </div>
+  </div>
+</div>
+
+<script>
+const SHEET_WEBHOOK = "https://script.google.com/macros/s/AKfycbziABmTPKH9B4cECuLXQH-dXVR4NuBCLPSNDCiTAibOizcullhr3b5_ImMsrklKQr1YYg/exec";
+
+function calculateAndSubmit() {
+  const sqft = document.getElementById('sqft').value;
+  const rate = document.getElementById('system').value;
+  const email = document.getElementById('email').value;
+  const phone = document.getElementById('phone').value;
+
+  console.log('Inputs:', { sqft, rate, email, phone });
+
+  if (!sqft || !email || !phone) {
+    alert('Please fill in all fields.');
+    return;
+  }
+
+  const total = Math.round(sqft * rate);
+
+  // Show results immediately
+  document.getElementById('priceDisplay').innerText = 'Estimated: $' + total.toLocaleString();
+  document.getElementById('result').style.display = 'block';
+  document.getElementById('successMsg').style.display = 'block';
+
+  // Non-blocking fetch to Google Sheet
+  fetch(SHEET_WEBHOOK, {
+    method: 'POST',
+    mode: 'no-cors',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      email, phone, sqft, systemRate: rate, estimatedPrice: total, source: 'Calculator App'
+    })
+  }).catch(err => console.log('Error saving lead:', err));
+}
+</script>
+
+</body>
+</html>
